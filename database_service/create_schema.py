@@ -53,7 +53,7 @@ def create_schema():
     print("Insertando compras en la base de datos...")
 
     # read line for csv and insert into database (skip first header line)
-    with open(DATA_FILE_PATH_CLEAN, 'r') as f:
+    with open(DATA_FILE_PATH_CLEAN, 'r', encoding="utf-8") as f:
 
         n_lines = 0
         for _ in f:

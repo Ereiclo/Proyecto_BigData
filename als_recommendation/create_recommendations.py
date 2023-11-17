@@ -73,7 +73,7 @@ def recommend(file_path, rank=80, maxIter=6, alpha=1, seed=0, best_items=10):
 
     final_path = RECOMENDATIONS_RESULT_PATH + "/" + filename + ".als"
 
-    results = open(final_path, "w")
+    results = open(final_path, "w", encoding="utf-8")
 
     print("Creando recomendaciones...")
 

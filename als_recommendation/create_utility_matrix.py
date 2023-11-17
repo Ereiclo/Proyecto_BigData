@@ -24,7 +24,7 @@ def create_utility_matrix(start, end):
         print("La matriz de utilidad ya existe.")
         return filename
 
-    f = open(filename, "w")
+    f = open(filename, "w", encoding="utf-8")
     print("Creando matriz de utilidad...")
 
     progress_bar = tqdm(total=len(clientes), unit='clientes')

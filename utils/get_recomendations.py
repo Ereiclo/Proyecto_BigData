@@ -14,7 +14,7 @@ def get_recomendations(file_path):
     start, end = filename.split('_')
     end = end[:10]
 
-    f = open(file_path, "r")
+    f = open(file_path, "r", encoding="utf-8")
 
     n_lines = 0
     for _ in f:
@@ -74,7 +74,7 @@ def get_recomendations(file_path):
     if not os.path.exists(RECOMENDATIONS_RESULT_PATH_JSON):
         os.makedirs(RECOMENDATIONS_RESULT_PATH_JSON)
     # save dictionary to a file
-    with open(f"{RECOMENDATIONS_RESULT_PATH_JSON}/{filename}.json", 'w') as file:
+    with open(f"{RECOMENDATIONS_RESULT_PATH_JSON}/{filename}.json", 'w', encoding="utf-8") as file:
         json.dump(results_dict, file, indent=4)
     # print(results_dict)
 

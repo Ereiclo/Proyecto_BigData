@@ -54,7 +54,7 @@ def create_recomendations(start, end, best_items=10):
 
     final_path = RECOMENDATIONS_RESULT_PATH + "/" + filename + ".collaborative"
 
-    f = open(final_path, "w")
+    f = open(final_path, "w", encoding="utf-8")
 
     print("Creando recomendaciones...")
 

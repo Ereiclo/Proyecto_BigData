@@ -9,4 +9,5 @@ utility_matrixes/
 recomendations
 recomendations_json
 recos_supermercados.zip
-__pychache__
+*/__pycache__
+__pycache__

@@ -6,7 +6,7 @@ from database_service.create_schema import create_schema
 from database_service.check_schema_existence import check_schema_existence
 from als_recommendation.create_utility_matrix import create_utility_matrix
 from als_recommendation.create_recommendations import recommend
-from als_recommendation.get_recomendations import get_recomendations
+from utils.get_recomendations import get_recomendations
 from als_recommendation.get_loss import get_loss
 from collaborative_recommendation.generate_close_products import generate_close_products
 from collaborative_recommendation.create_recomendations import create_recomendations
@@ -24,9 +24,9 @@ else:
 # path = recommend(file)
 # print(path)
 
-# get_recomendations(path)
+get_recomendations('./recomendations/2021-07-01_2021-07-10.txt.als')
 
-create_recomendations('2021-07-01', '2021-07-10')
+# create_recomendations('2021-07-01', '2021-07-10')
 
 # for data in query("select * from compras limit 5;"):
 # print(data)

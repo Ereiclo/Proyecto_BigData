@@ -54,24 +54,24 @@ def get_close_categories(vector_id, vector, categories_vector, n=10):
     distances = []
     for id_, category_vector in categories_vector:
         if vector_id == id_:
-            distances.append(10000000000000000000000000000000000000)
+            distances.append(-10000000000000000000000000000000000000)
             continue
         distances.append(get_cos_distance(vector, category_vector))
 
     distances = np.array(distances)
     indexes = np.argsort(distances)[-n:]
-    print(distances[indexes])
+    indexes = list(reversed(indexes))
+    # print(distances[indexes])
 
     close_categories = []
 
     for index in indexes:
         close_categories.append(categories_vector[index][0])
-    return close_categories 
+    return close_categories
 
 
 def generate_close_products(start, end):
 
-    _, categories = get_category_ids()
     vectors = create_categories_vector(start, end)
 
     print("Generando productos similares...")
@@ -82,12 +82,10 @@ def generate_close_products(start, end):
     for category_id, vector in vectors:
 
         close_categories = get_close_categories(category_id, vector, vectors)
-        print(category_id,close_categories)
+        # print(category_id, close_categories)
 
         result[category_id] = close_categories
 
         progress_bar.update(1)
-
-        return
 
     return result

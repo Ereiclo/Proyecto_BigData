@@ -77,3 +77,5 @@ def get_recomendations(file_path):
     with open(f"{RECOMENDATIONS_RESULT_PATH_JSON}/{filename}.json", 'w') as file:
         json.dump(results_dict, file, indent=4)
     # print(results_dict)
+
+

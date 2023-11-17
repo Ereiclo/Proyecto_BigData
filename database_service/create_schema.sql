@@ -20,7 +20,7 @@ CREATE TABLE compras(
     CostoUnitario real
 );
 
-\copy compras from '/home/ereiclo/universidad/2023-2/bigdata/proyecto/recos_supermercados/supermercados_clean.csv' delimiter ',' csv header;
+\copy compras from '/home/ereiclo/universidad/2023-2/bigdata/proyecto/data/supermercados_clean.csv' delimiter ',' csv header;
 
 --eliminar productos con cantidad negativa 
 delete from
@@ -39,3 +39,9 @@ where
         and cantidad = floor(cantidad)
     )
     or codcliente='0' or cantidad = 0;
+
+delete from  compras where pesoneto <= 0 or preciounitario <= 0 or porcdescuento < 0 or  impdescuento < 0 or costounitario < 0 or cantidad < 0 or importelinea
+ < 0 or importelineabs < 0;
+
+-- order codigosap,descripcion, sum(importelinea) as total  by total
+CREATE INDEX idx_compras_fecha_codcliente ON compras (fecha, codcliente);

@@ -54,7 +54,7 @@ def get_loss(file_path, rank=100, maxIter=6, alpha=1, seed=0):
     _, df = convert_to_df(data.collect())
 
     # Build the recommendation model using ALS on the training data
-    df.show()
+    # df.show()
 
     als = ALS(rank=rank, maxIter=maxIter, alpha=alpha, implicitPrefs=False, seed=seed,
               userCol="user", itemCol="item", ratingCol="rating")

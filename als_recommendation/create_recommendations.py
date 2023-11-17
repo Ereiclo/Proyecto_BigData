@@ -54,7 +54,7 @@ def recommend(file_path, rank=80, maxIter=6, alpha=1, seed=0, best_items=10):
     users, df = convert_to_df(data.collect())
 
     # Build the recommendation model using ALS on the training data
-    df.show()
+    # df.show()
 
     als = ALS(rank=rank, maxIter=maxIter, alpha=alpha, implicitPrefs=True, seed=seed,
               userCol="user", itemCol="item", ratingCol="rating")

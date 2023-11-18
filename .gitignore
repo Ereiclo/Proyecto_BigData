@@ -5,9 +5,7 @@ recommendation_results/
 .env
 utility_matrixes/
 *.als
-*.als.json
 recomendations
-recomendations_json
 recos_supermercados.zip
 */__pycache__
 __pycache__

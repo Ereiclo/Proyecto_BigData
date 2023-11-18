@@ -42,7 +42,7 @@ def create_categories_vector(start, end):
               categoria ='{category['categoria']}' and subcategoria = '{category['subcategoria']}' and porcdescuento > 0 and {base};
         """)[0]
 
-        vector.append((categories_dictionary[join(category["categoria"], category["subcategoria"])], np.array([category_id, temp['min'],
+        vector.append((categories_dictionary[join(category["categoria"], category["subcategoria"])], np.array([10*category_id, temp['min'],
                       temp['max'], temp['avg'],  temp2['count'] / temp['count']*100])))
         progress_bar.update(1)
 

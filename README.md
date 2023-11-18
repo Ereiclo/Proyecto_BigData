@@ -1,5 +1,7 @@
 # Instrucciones
 
+## **Disclaimer: Este codigo solo esta comprobado en linux (hay problemas con pyspark en windows)**
+
 Para levantar todas las dependencias del proyecto se debe usar el siguiente comando
 
 ```bash
@@ -15,9 +17,4 @@ DB_PASSWORD={}
 DB_PORT={}
 ```
 
-Tambien debe crear una base de datos con el nombre **compras** en postgres. 
-
-
-
-
-
+Tambien debe crear una base de datos con el nombre **compras** en postgres.

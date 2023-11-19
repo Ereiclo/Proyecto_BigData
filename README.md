@@ -8,7 +8,7 @@
 # Descripción
 
 Este proyecto consitió en crear un motor de recomendacion para compras en un supermercado.
-Para ello usamos dos métodos: ALS y filtros colaborativos por items. El archivo de ejemplo que muestra como correr la aplicación es **main.ipynb**.
+Para ello usamos dos métodos: ALS y filtros colaborativos por items. El archivo de ejemplo que muestra como correr la aplicación es **main.ipynb**. Tambien la carpeta plataforma tiene recomendaciones finales para el periodo 2021-07-01 - 2021-07-10. 
 
 # Instrucciones
 

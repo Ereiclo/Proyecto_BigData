@@ -6,7 +6,7 @@ from database_service.query import get_category_ids, get_categories_count_with_f
 from definitions.path import RECOMENDATIONS_RESULT_PATH_JSON
 
 
-def get_recomendations(file_path):
+def get_recomendations(file_path, base_name):
 
     _, categorias = get_category_ids()
 
@@ -74,8 +74,6 @@ def get_recomendations(file_path):
     if not os.path.exists(RECOMENDATIONS_RESULT_PATH_JSON):
         os.makedirs(RECOMENDATIONS_RESULT_PATH_JSON)
     # save dictionary to a file
-    with open(f"{RECOMENDATIONS_RESULT_PATH_JSON}/{filename}.json", 'w', encoding="utf-8") as file:
+    with open(f"{RECOMENDATIONS_RESULT_PATH_JSON}/{start}_{end}.{base_name}.json", 'w', encoding="utf-8") as file:
         json.dump(results_dict, file, indent=4)
     # print(results_dict)
-
-

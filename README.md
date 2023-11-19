@@ -1,3 +1,15 @@
+
+# Participantes
+
+- Eric Bracamonte Otiniano
+- Grover Ugarte
+- Jorge Nicho
+
+# Descripción
+
+Este proyecto consitió en crear un motor de recomendacion para compras en un supermercado.
+Para ello usamos dos métodos: ALS y filtros colaborativos por items. El archivo de ejemplo que muestra como correr la aplicación es **main.ipynb**.
+
 # Instrucciones
 
 ## **Disclaimer: Este codigo solo esta comprobado en linux (hay problemas con pyspark en windows)**
